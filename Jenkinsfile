@@ -35,7 +35,9 @@ node{
           }
           
           stage('Push Image'){
-              docker.withRegistry('https://cloud.docker.com/repository/docker/bidcrm/test','DockerRepo')
+              docker.withRegistry('https://cloud.docker.com/repository/docker/bidcrm/test','DockerRepo'){
+                app.push();
+              }
           }
           
       }catch(err){
