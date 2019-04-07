@@ -13,7 +13,7 @@ node{
                     
                 //buildInfo2 = server.upload spec: '${env.PACKER_OPTIONS}'
 
-                echo " Version "+ ${env.PACKER_OPTIONS}
+                echo " Version "+ {env.PACKER_OPTIONS}
 
            
                 }
