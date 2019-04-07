@@ -13,7 +13,7 @@ node{
                     
                 //buildInfo2 = new JsonBuilder(load("${env.PACKER_OPTIONS}"))
                  //echo " ${env.PACKER_OPTIONS}"
-                buildInfo2=load("./x,txt")
+                buildInfo2=load("./x.txt")
                     
                 echo "Test:" +buildInfo2.toString()
 
