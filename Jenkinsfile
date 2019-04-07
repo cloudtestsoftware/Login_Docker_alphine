@@ -1,6 +1,7 @@
 node{
     def app;
     def config_id='c7edaef0-eebb-4cde-b0ed-0600830a82cd';
+    def buildInfo2;
     currentBuild.result='SUCCESS'
     
     try{
@@ -10,9 +11,9 @@ node{
                 echo " =========== ^^^^^^^^^^^^ Reading config from pipeline script "
                 sh "cat ${env.PACKER_OPTIONS}"
                     
-               def buildInfo2 = server.upload spec: ${env.PACKER_OPTIONS}
+                buildInfo2 = server.upload spec: ${env.PACKER_OPTIONS}
 
-                echo " Version "+buildInfo2.Version
+                echo " Version "+buildInfo2
 
            
                 }
