@@ -9,13 +9,13 @@ node{
          
                 configFileProvider([configFile(fileId: config_id, variable: 'PACKER_OPTIONS')]) {
                 echo " =========== ^^^^^^^^^^^^ Reading config from pipeline script "
-                sh "cat ${env.PACKER_OPTIONS}"
+                sh "cat ${env.PACKER_OPTIONS} >x.txt"
                     
                 //buildInfo2 = new JsonBuilder(load("${env.PACKER_OPTIONS}"))
-                 echo " ${env.PACKER_OPTIONS}"
-                buildInfo2=load("${env.PACKER_OPTIONS}")
+                 //echo " ${env.PACKER_OPTIONS}"
+                buildInfo2=load("./x,txt")
                     
-                echo buildInfo2.toString()
+                echo "Test:" +buildInfo2.toString()
 
            
                 }
