@@ -24,7 +24,7 @@ node{
           }
           
           stage('Build Image'){
-              app =docker.build('/bidcrm/test:${env.BUILD_NUMBER}')
+              app =docker.build('/bidcrm/test:Test-${BUILD_NUMBER}')
           }
           
           stage('Test Image'){
