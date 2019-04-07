@@ -11,8 +11,9 @@ node{
                 echo " =========== ^^^^^^^^^^^^ Reading config from pipeline script "
                 sh "cat ${env.PACKER_OPTIONS}"
                     
-                //buildInfo2 = server.upload spec: '${env.PACKER_OPTIONS}'
-
+                buildInfo2 = server.upload spec: {env.PACKER_OPTIONS}
+                 echo " Version 1 "+ buildInfo2.Version
+                    
                 echo " Version "+ {env.PACKER_OPTIONS}
 
            
