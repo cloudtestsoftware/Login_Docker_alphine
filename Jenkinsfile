@@ -13,21 +13,29 @@ node{
                     
                 //buildInfo2 = new JsonBuilder(load("${env.PACKER_OPTIONS}"))
                  //echo " ${env.PACKER_OPTIONS}"
-                buildInfo2=load("./x.txt")
+                //buildInfo2=load("./x.txt")
                     
-                echo "Test:" +buildInfo2.toString()
+                //echo "Test:" +buildInfo2.toString()
 
            
                 }
+              
+              //git "https://github.com/cloudtestsoftware/Login_Docker_alphine.git"
           }
           
           stage('Build Image'){
+              app =docker.build('/bidcrm/test:${env.BUILD_NUMBER}')
           }
           
-          stage('Deploy Image'){
+          stage('Test Image'){
+              app.inside{
+                  echo "Test Passed"
+              
+              }
           }
           
-          stage('Cleanup'){
+          stage('Push Image'){
+              docker.withRegistry('https://cloud.docker.com/repository/docker/bidcrm/test','DockerRepo')
           }
           
       }catch(err){
