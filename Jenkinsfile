@@ -12,7 +12,7 @@ node{
                     
                def buildInfo2 = server.upload spec: ${env.PACKER_OPTIONS}
 
-                echo " Version "+buildInfo2.version
+                echo " Version "+buildInfo2.Version
 
            
                 }
