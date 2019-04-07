@@ -11,7 +11,7 @@ node{
                     //sh "cat ${env.list}"
                     echo " =========== ~~~~~~~~~~~~ ============ "
 
-              }
+              //}
           }
           
           stage('Build Image'){
