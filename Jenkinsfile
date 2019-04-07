@@ -11,11 +11,11 @@ node{
                 echo " =========== ^^^^^^^^^^^^ Reading config from pipeline script "
                 sh "cat ${env.PACKER_OPTIONS}"
                     
-                buildInfo2 = new JsonBuilder(load("${env.PACKER_OPTIONS}"))
+                //buildInfo2 = new JsonBuilder(load("${env.PACKER_OPTIONS}"))
                  echo " ${env.PACKER_OPTIONS}"
-                 //buildInfo2=load("${env.PACKER_OPTIONS}")
+                buildInfo2=load("${env.PACKER_OPTIONS}")
                     
-                //echo " Version "+ {env.PACKER_OPTIONS}
+                echo buildInfo2.toString()
 
            
                 }
