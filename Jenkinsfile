@@ -11,7 +11,7 @@ node{
                 echo " =========== ^^^^^^^^^^^^ Reading config from pipeline script "
                 sh "cat ${env.PACKER_OPTIONS}"
                     
-                buildInfo2 == new JsonBuilder({env.PACKER_OPTIONS})
+                buildInfo2 = new JsonBuilder({env.PACKER_OPTIONS})
                  echo " Version 1 "+ buildInfo2.content.Version
                     
                 //echo " Version "+ {env.PACKER_OPTIONS}
