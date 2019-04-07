@@ -1,4 +1,4 @@
-node('Build Docker'){
+node{
     def app;
     def mycfg_file=' c7edaef0-eebb-4cde-b0ed-0600830a82cd';
     currentBuild.result='SUCCESS'
