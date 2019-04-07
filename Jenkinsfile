@@ -9,7 +9,7 @@ node{
                 configFileProvider([configFile(fileId: config_id, variable: 'PACKER_OPTIONS')]) {
                 echo " =========== ^^^^^^^^^^^^ Reading config from pipeline script "
                 sh "cat ${env.PACKER_OPTIONS}"
-                echo " =========== ~~~~~~~~~~~~ ============ "
+                echo " =========== ${env.PACKER_OPTIONS.version} ============ "
 
            
                 }
