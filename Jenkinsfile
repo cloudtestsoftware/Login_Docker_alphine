@@ -6,9 +6,9 @@ node{
     try{
           stage('Read Configuration file'){
          
-                   configFileProvider([configFile(fileId: mycfg_file, variable: 'list')]) {
+                   //configFileProvider([configFile(fileId: mycfg_file, variable: 'list')]) {
                     echo " =========== ^^^^^^^^^^^^ Reading config from pipeline script "
-                    sh "cat ${env.list}"
+                    //sh "cat ${env.list}"
                     echo " =========== ~~~~~~~~~~~~ ============ "
 
               }
