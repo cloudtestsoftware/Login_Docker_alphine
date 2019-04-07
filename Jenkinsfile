@@ -1,17 +1,18 @@
 node{
     def app;
-    def config=load(' c7edaef0-eebb-4cde-b0ed-0600830a82cd');
+    def config_id='c7edaef0-eebb-4cde-b0ed-0600830a82cd';
     currentBuild.result='SUCCESS'
     
     try{
           stage('Read Configuration file'){
          
-                   //configFileProvider([configFile(fileId: mycfg_file, variable: 'list')]) {
-                    echo " =========== ^^^^^^^^^^^^ Reading config from pipeline script ${config.version}"
-                    //sh "cat ${env.list}"
-                    echo " =========== ~~~~~~~~~~~~ ============ "
+                configFileProvider([configFile(fileId: config_id, variable: 'PACKER_OPTIONS')]) {
+                echo " =========== ^^^^^^^^^^^^ Reading config from pipeline script "
+                sh "cat ${env.PACKER_OPTIONS}"
+                echo " =========== ~~~~~~~~~~~~ ============ "
 
-              //}
+           
+                }
           }
           
           stage('Build Image'){
