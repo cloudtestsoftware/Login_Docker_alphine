@@ -1,13 +1,13 @@
 node{
     def app;
-    def mycfg_file=' c7edaef0-eebb-4cde-b0ed-0600830a82cd';
+    def config=load(' c7edaef0-eebb-4cde-b0ed-0600830a82cd');
     currentBuild.result='SUCCESS'
     
     try{
           stage('Read Configuration file'){
          
                    //configFileProvider([configFile(fileId: mycfg_file, variable: 'list')]) {
-                    echo " =========== ^^^^^^^^^^^^ Reading config from pipeline script "
+                    echo " =========== ^^^^^^^^^^^^ Reading config from pipeline script ${config.version}"
                     //sh "cat ${env.list}"
                     echo " =========== ~~~~~~~~~~~~ ============ "
 
