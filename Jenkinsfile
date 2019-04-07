@@ -20,7 +20,7 @@ node{
            
                 }
               
-              //git "https://github.com/cloudtestsoftware/Login_Docker_alphine.git"
+              git "https://github.com/cloudtestsoftware/Login_Docker_alphine.git"
           }
           
           stage('Build Image'){
