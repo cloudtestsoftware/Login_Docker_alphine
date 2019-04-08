@@ -1,5 +1,7 @@
 Git Commands
 ============
+ 
+Learn git commands
 
 _A list of my commonly used Git commands_
 
