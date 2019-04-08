@@ -44,6 +44,11 @@ _A list of my commonly used Git commands_
 | `git merge [source branch] [target branch]` | Merge a branch into a target branch |
 | `git stash` | Stash changes in a dirty working directory |
 | `git stash clear` | Remove all stashed entries |
+| `git stash show` | Show all stash |
+| `git stash pop ` | bring back the stash files, throws away the dirty file after this is poped us for reuse|
+|  git stash apply | leaves it in the stash list for possible later reuse|
+|  git stash drop | drop that particular dirty files from the statsh list|
+|  git stash show -p | shows you changes with the current |
 
 ### Sharing & Updating Projects
 
