@@ -56,7 +56,8 @@ _A list of my commonly used Git commands_
 | `git pull` | Update local repository to the newest commit |
 | `git pull origin [branch name]` | Pull changes from remote repository |
 | `git remote add origin ssh://git@github.com/[username]/[repository-name].git` | Add a remote repository |
-| `git remote set-url origin ssh://git@github.com/[username]/[repository-name].git` | Set a repository's origin branch to SSH |
+| `git remote set-url origin ssh://git@github.com/[username]/[repository-name].git` | Set a repository's origin branch to SSH |  git revert   | undo a commit creating a new commit, work in public branch
+|  git reset    | Reverting undoes a commit by creating a new commit. ... Contrast this with git reset , which does alter the existing commit history. For this reason, git revert should be used to undo changes on a public branch, and git reset should be reserved for undoing changes on a private branch.
 
 ### Inspection & Comparison
 
